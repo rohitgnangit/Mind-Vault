@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { summarizeAction } from '@/actions/summarizeAction'
 import DetailsPopUp from './DetailsPopUp'
+import { Tag } from "lucide-react"
 
 const NoteCard = ({ note, fetchNotes }) => {
     const [summary, setSummary] = useState("")
@@ -33,8 +34,8 @@ const NoteCard = ({ note, fetchNotes }) => {
                 <span className="text-xs">{new Date(note.createdAt).toLocaleString()}</span>
             </div>
             <div className="flex flex-wrap gap-2 mb-3">
-                <span className="text-xs flex gap-2 bg-gray-200 px-2 py-1 rounded-md">
-                    <Image src="/tag.png" alt="Tag Icon" width={15} height={15} />
+                <span className="text-xs flex items-center gap-2 bg-gray-200 px-2 py-1 rounded-md">
+                    <Tag size={13}/>
                     {note.tags}
                 </span>
             </div>

@@ -43,7 +43,7 @@ const home = () => {
       <div className="top mb-5">
         <button onClick={() => setNotesUploadPopup(true)} type="button" className="w-full md:w-[50%] text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-2 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5 cursor-pointer rounded-full">✏️ Create Note</button>
       </div>
-      <div className="Inputs flex flex-col gap-5 sticky top-15 z-30 bg-gray-100">
+      <div className="Inputs flex flex-col gap-5 bg-gray-100">
         <div className="search bg-gray-200 flex w-full md:w-[50%] rounded-full">
           <input className='Search w-full py-2 px-5 rounded-xl text-sm outline-none' name="search" value={search} onChange={searchItem} type="text" placeholder='search for note' />
           <span className="w-10 h-10 mx-2 my-1 flex justify-center items-center rounded-full">
@@ -57,7 +57,7 @@ const home = () => {
 
       {/* Bottom */}
       <div className="bottom">
-        <div className="pt-2 sticky top-46 z-30 bg-gray-100 pb-4">
+        <div className="pt-2 sticky top-15 z-30 bg-gray-100 pb-4">
           <div className="buttons flex gap-2">
             <button onClick={() => setType("all")} className={`px-3.5 py-1.5 text-xs font-semibold rounded-xl cursor-pointer ${type === "all" ? "bg-purple-500 text-white" : "bg-slate-200 text-gray-800"}`}>All</button>
             <button onClick={() => setType("note")} className={`px-3.5 py-1.5 text-xs font-semibold rounded-xl cursor-pointer ${type === "note" ? "bg-purple-500 text-white" : "bg-slate-200 text-gray-800"}`}>Note</button>
