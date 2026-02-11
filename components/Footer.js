@@ -11,7 +11,7 @@ const Footer = () => {
         >
             <div className="top flex justify-center gap-10 md:gap-20 mt-10">
                 <motion.div className="flex flex-col gap-2"
-                    initial={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
@@ -23,7 +23,7 @@ const Footer = () => {
                     <a href="" className="block text-white hover:text-gray-300">Login</a>
                 </motion.div>
                 <motion.div className="flex flex-col gap-2"
-                    initial={{ opacity: 0, x: 50 }}
+                    initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
@@ -34,14 +34,14 @@ const Footer = () => {
                     <a href="" className="block text-white hover:text-gray-300">Terms & Conditions</a>
                 </motion.div>
             </div>
-            <motion.div className="bottom px-7 md:px-0 flex flex-col justify-center items-center gap-2 mb-10"
+            <motion.div className="bottom px-7 md:px-0 flex flex-col justify-center items-center gap-1 mb-10"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
             >
                 <p className="text-sm text-gray-300">© 2026 MindVault | All rights reserved.</p>
-                <p className="text-xs text-gray-400 mt-4">MindVault — Capture, organize, and unlock your knowledge with AI-powered intelligence.Built to help you think better,</p>
+                <p className="text-xs text-gray-400 mt-3">MindVault — Capture, organize, and unlock your knowledge with AI-powered intelligence.Built to help you think better,</p>
                 <p className="text-xs text-gray-400">remember more, and learn faster every day.</p>
             </motion.div>
         </motion.div>

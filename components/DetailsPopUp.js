@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-const DetailsPopUp = ({ note, summary, setShowDetails }) => {
+const DetailsPopUp = ({ note, setSummary, setShowDetails }) => {
 
     const [show, setShow] = useState(false);
 
@@ -12,6 +12,7 @@ const DetailsPopUp = ({ note, summary, setShowDetails }) => {
 
     const handleClose = () => {
         setShow(false);
+        setSummary("");
         setTimeout(() => {
             setShowDetails(false);
         }, 300);
@@ -38,9 +39,9 @@ const DetailsPopUp = ({ note, summary, setShowDetails }) => {
                 </div>
                 <p className="text-gray-700 text-sm mb-4">{note.content}</p>
 
-                {summary && (
+                {note.summaryWithAI && (
                     <div className="bg-purple-50 text-purple-700 p-3 rounded-lg text-sm mb-4">
-                        <strong>AI Summary:</strong> {summary}
+                        <strong>AI Summary:</strong> {note.summaryWithAI}
                     </div>
                 )}
 

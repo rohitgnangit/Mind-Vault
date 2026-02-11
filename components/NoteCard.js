@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { summarizeAction } from '@/actions/summarizeAction'
 import DetailsPopUp from './DetailsPopUp'
 
-const NoteCard = ({ note }) => {
+const NoteCard = ({ note, fetchNotes }) => {
     const [summary, setSummary] = useState("")
     const [isSummarizing, setIsSummarizing] = useState(false)
     const [showDetails, setShowDetails] = useState(false);
@@ -16,9 +16,12 @@ const NoteCard = ({ note }) => {
         setIsSummarizing(true);
         const summary = await summarizeAction(note._id, note.content);
         setSummary(summary);
+        fetchNotes();
         setIsSummarizing(false);
     }
+    
     return (
+        <>
         <div className="Note bg-white rounded-2xl shadow-md p-5 hover:shadow-xl transition">
             <h3 className="text-lg font-semibold mb-2">
                 {note.title}
@@ -63,8 +66,11 @@ const NoteCard = ({ note }) => {
                 </button>
             </div>
             {/* Details popup when user clicks button */}
-            {showDetails && <DetailsPopUp note={note} summary={summary} setShowDetails={setShowDetails} />}
+            {showDetails && <DetailsPopUp note={note} setSummary={setSummary} setShowDetails={setShowDetails} />}
+            {/* Details popop when summary is available */}
+            {summary.length > 0 && <DetailsPopUp note={note} setSummary={setSummary} setShowDetails={setShowDetails} isSummarizing={false} />}
         </div>
+        </>
     )
 }
 

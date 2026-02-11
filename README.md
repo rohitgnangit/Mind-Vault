@@ -12,3 +12,5 @@ MindVault is an AI-powered note-taking platform that helps users store and organ
 - Lenis (for smooth scroll)
 
 ## Demo Video
+
+[![Watch Demo](https://img.youtube.com/vi/AG7zDwq7oFs/0.jpg)](https://youtu.be/AG7zDwq7oFs?si=2iPilA5VYboDvpcp)
