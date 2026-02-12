@@ -17,6 +17,20 @@ https://mind-vault-rosy.vercel.app/
 - Search notes efficiently
 - Clean and responsive modern UI
 - Modular architecture designed for scalability
+### ⭐ Public API Access :
+MindVault exposes its intelligence through a public endpoint that allows external systems or widgets to query stored knowledge.
+
+```bash
+GET /api/public/brain/query?q=<your_query>
+```
+- response :
+```bash
+{
+  "answer": "Generated response based on stored notes",
+  "sources": ["Note 1", "Note 2"]
+}
+```
+
 
 ## 🧠 How It Works
 MindVault processes and stores user notes, allowing AI to generate summaries and contextual answers using stored knowledge.
