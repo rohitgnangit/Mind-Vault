@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import { Upload, Brain, Search, Shield } from "lucide-react";
+import { Save, Brain, Search, Bot } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -29,8 +29,8 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.6 }}
           >
-            <Upload size={20} color="gray" />
-            <p className="">Upload notes easily</p>
+            <Save size={20} color="gray" />
+            <p className="">Save notes easily</p>
           </motion.div>
           <motion.div className="w-[70%] md:w-[20%] flex flex-col justify-center items-center gap-5 py-10 px-13 shadow-lg text-sm text-gray-600 font-semibold rounded-lg border border-slate-200"
             whileHover={{ scale: 1.05 }}
@@ -39,19 +39,19 @@ export default function Home() {
             <Brain size={20} color="gray" />
             <p className="">AI Summarization</p>
           </motion.div>
+           <motion.div className="w-[70%] md:w-[20%] flex flex-col justify-center items-center gap-5 py-10 px-13 shadow-lg text-sm text-gray-600 font-semibold rounded-lg border border-slate-200"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Bot size={20} color="gray" />
+            <p className="">AI chat</p>
+          </motion.div>
           <motion.div className="w-[70%] md:w-[20%] flex flex-col justify-center items-center gap-5 py-10 px-13 shadow-lg text-sm text-gray-600 font-semibold rounded-lg border border-slate-200"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.6 }}
           >
             <Search size={20} color="gray" />
             <p className="">Smart Search</p>
-          </motion.div>
-          <motion.div className="w-[70%] md:w-[20%] flex flex-col justify-center items-center gap-5 py-10 px-13 shadow-lg text-sm text-gray-600 font-semibold rounded-lg border border-slate-200"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Shield size={20} color="gray" />
-            <p className="">Organized Dashboard</p>
           </motion.div>
         </motion.div>
       </div>
@@ -89,7 +89,7 @@ export default function Home() {
           viewport={{ once: true }}
         >How it works ?</motion.h2>
         {/* Cards */}
-        <motion.div className="cards flex flex-col md:flex-row justify-center items-center gap-30 w-full mt-15"
+        <motion.div className="cards flex flex-col md:flex-row justify-center items-center gap-10 w-full mt-15"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -110,6 +110,14 @@ export default function Home() {
             <Image src="/AI-icon.png" width={30} height={30} alt="Notes" />
             <p className="text-xl text-slate-700 font-bold ">Summarize with AI</p>
             <p className="text-slate-500">Just click the Summarize with AI button and get a concise summary of your notes</p>
+          </motion.div>
+          <motion.div className="w-[90%] md:w-[20%] flex flex-col justify-center gap-5 py-10 px-10 shadow-lg text-sm rounded-lg border border-slate-200 hover:border-[#C5A059]"
+            whileHover={{ y: -10 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Image src="/AI-chat.png" width={30} height={30} alt="Notes" />
+            <p className="text-xl text-slate-700 font-bold ">Chat with AI</p>
+            <p className="text-slate-500">Ask questions about note trough the UI, and get structured answer from AI</p>
           </motion.div>
           <motion.div className="w-[90%] md:w-[20%] flex flex-col justify-center gap-5 py-10 px-10 shadow-lg text-sm rounded-lg border border-slate-200 hover:border-[#C5A059]"
             whileHover={{ y: -10 }}
